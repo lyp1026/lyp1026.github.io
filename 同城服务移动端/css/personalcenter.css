@@ -1,0 +1,122 @@
+﻿  /*个人中心部分 开始*/
+     .personalcenter{
+         margin-top:50px;  
+         height:100%;
+     }
+     .personalcenter li{
+        list-style:none;     
+        position:relative;
+        border:solid 1px #CECECE;
+        top:50%;
+        margin-right:20px;
+        cursor:pointer;       
+     }
+       .personalcenter img{
+         margin-left:15px;
+         width:20px;
+         height:20px;
+         margin-top:10px;
+     
+     }
+     .personalcenter span{
+         margin-left:15px;
+         font-size:20px;
+
+     }
+     .personalcenter a{
+         text-decoration:none;
+         line-height:65px;
+         display:block;
+     }
+     .personalcenter li::after{
+         content:"";
+         position:absolute;
+         background:url(../image/下载.png) left top no-repeat;
+         display: block;
+         right: 20px;
+         top: 50%;
+         margin-top: -15px;
+         width: 18px;
+         height: 34px;
+         -webkit-background-size: 18px 34px;                          
+            }
+
+
+
+     /*个人中心部分  开始*/
+/*我的用户   开始*/
+#page{
+    margin:auto;
+    padding:0px;
+}
+.page1{
+    width:100%;
+    height:60px;
+    border:solid 1px #808080;
+    background-color:#87CEEB;
+    text-align:center;
+
+}
+.user{
+      float:left;
+      padding:20px 2%;
+    height:20px;
+    cursor:pointer;
+}
+ .page1 h3{
+     padding-right:9%;
+ }
+#myuser .ui-block-a,#myuser .ui-block-b{
+    background-color:#D6F5FB;
+    height:150px;
+    font-weight: bold;
+    text-align: center;
+    cursor:pointer;   
+}
+#myuser  .ui-block-a img,#myuser .ui-block-b img{
+      padding-top:50px;
+  }
+ #myuser  .ui-block-a a,#myuser .ui-block-b a{
+    text-decoration:none;
+   }
+/*我的用户    结束*/
+/*基本信息   开始*/
+#message{
+    position:relative;
+    height:60px;
+    background-color:#B792E4;
+
+}
+#message ul{
+    padding:0px;
+    margin:0px;
+}
+#message  li{
+    list-style:none ;
+    float:left;
+    width:20%;
+    text-align:center;
+    line-height:60px;
+}
+
+a{
+      text-decoration:none;
+}
+#content1{
+    
+    height:100%;
+    /*display:none;*/
+    background-color:#CEB1D6;
+    border:solid 1px #808080;
+    position:relative;
+}
+#content1 .new{
+    height:40px;
+    font-size:18px;
+    color:black;
+    line-height:40px;
+}
+
+/*基本信息   结束*/
+
+

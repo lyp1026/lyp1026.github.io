@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+    <link rel="stylesheet" href="css/Style.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".a1").click(function () {
+                $(".a2").fadeToggle();
+            });
+
+        });
+        //图片改变大小
+        $(document).ready(function () {
+            //图库弹出层
+            $(".imgBg").height($(document).height());
+            $(".right").click(function () {
+                $(".img_html").html($(this).find(".hidden").html());
+                $(".imgBg").show();
+                $(".imgBox").fadeIn(300)
+            });
+            $(".imgclose").click(function () {
+                $(".imgBg, .imgBox").hide()
+            });
+            //登录弹出页面
+        $(document).ready(function ($) {
+
+            $('.denglu').click(function () {
+                $('.dlBg').show();
+                $('.dlBg').height($(document).height());
+                $('.login1').slideDown(200);
+            });
+            $('.head .close').click(function () {
+                $('.dlBg').hide();
+                $('.login1').slideUp(200);
+            })
+
+        });
+            //注册弹出页面
+        $(document).ready(function ($) {
+
+            $('.zhuce').click(function () {
+                $('.zcBg').show();
+                $('.zcBg').height($(document).height());
+                $('.login2').slideDown(200);
+            });
+            $('.head .close').click(function () {
+                $('.zcBg').hide();
+                $('.login2').slideUp(200);
+            })
+
+        });
+
+
+        });
+    </script> 
+    <title>同城装修</title>
+</head>
+<body>
+    <div data-role="page">
+        <div  class="header">
+            <div class="logo" title="同城装修">
+                <img src="image/tongcheng.png" />
+            </div>
+            <div class="login">
+                <a  href="javascript:" class="zhuce">注册</a>
+                |
+                <a  href="javascript:" class="denglu">登录</a>
+            </div>
+            <!--登录注册页面  开始-->
+
+            <div class="dlBg"></div>
+
+            <div class="login1">
+                <div class="head">
+                    <a href="javascript:;" class="close" title="关闭">×</a>
+                    <h2>用户登录</h2>
+                </div>
+                <div class="body">
+                    <form method="post">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <label for="fname">用户名：</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="fname" id="fname" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="password">密码：</label>
+                                </td>
+                                <td>
+                                    <input type="password" name="password" id="password" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td >
+                                    <input type="submit" value="登录"  data-role="none" />
+                                    </td>
+                                    <td>
+                                    <input type="button" value="去注册" class="zhuce" data-role="none" />
+                                </td>
+                            </tr>
+                        </table>
+
+                       
+                    </form>
+                </div>
+            </div>
+            <!--注册弹出层 开始-->
+            <div class="zcBg"></div>
+            <!--注册弹出层 结束-->
+            <div class="login2">
+                <div class="head">
+                    <a href="javascript:" class="close" title="关闭">×</a>
+                    <h2>用户注册</h2>
+                </div>
+                <div class="body">
+                    <form method="post">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <label for="fname">用户名：</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="fname" class="fname" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email">电子邮箱：</label>
+                                </td>
+                                <td>
+                                    <input type="email" name="email" id="email" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="password">密码：</label>
+                                </td>
+                                <td>
+                                    <input type="password" name="password" class="password" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="password">确认密码：</label>
+                                </td>
+                                <td>
+                                    <input type="password" name="repassword" id="repassword" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="password">所在区域：</label>
+                                </td>
+                                <td>
+                                    <fieldset data-role="controlgroup" data-type="horizontal" >
+                                       
+                                        <select class="area" data-role="none" style="width:100px;height:30px; font-size:20px;">
+                                            <option>全部省</option>
+                                            <option value="1">山东省</option>
+                                            <option value="2"> 辽宁省 </option>
+                                            <option value="3">吉林省</option>
+                                            <option value="4">黑龙江省</option>
+                                            <option value="5">天津市</option>
+                                            <option value="6">内蒙古自治区</option>
+                                            <option value="7">山西省</option>
+                                            <option value="8">河北省</option>
+                                            <option value="9">上海市</option>
+                                            <option value="10">浙江省</option>
+                                            <option value="11"> 江苏省</option>
+                                            <option value="12"> 安徽省</option>
+                                            <option value="13"> 北京市</option>
+                                            <option value="14">江西省</option>
+                                            <option value="15">福建省</option>
+                                            <option value="16">湖南省</option>
+                                            <option value="17">湖北省</option>
+                                            <option value="18">广东省</option>
+                                            <option value="19">广西壮族自治区</option>
+                                            <option value="20">河南省</option>
+                                            <option value="21">贵州省</option>
+                                            <option value="22">云南省</option>
+                                            <option value="23"> 重庆市</option>
+                                            <option value="24"> 四川省</option>
+                                            <option value="25">青海省</option>
+                                            <option value="26">甘肃省</option>
+                                            <option value="27">陕西省</option>
+                                            <option value="28">海南省</option>
+                                            <option value="29">宁夏自治区</option>
+                                            <option value="30">香港特别行政区</option>
+                                            <option value="31">澳门特别行政区 </option>
+                                            <option value="32">台湾</option>
+                                            <option value="33">西藏自治区 </option>
+                                            <option value="34">新疆维吾尔自治区</option>
+                                        </select>
+                                  
+
+                                        <select class="area" data-role="none" style="width:90px;height:30px; font-size:20px;">
+                                            <option>全部市</option>
+                                            <option value="1">济南市</option>
+                                            <option value="2">青岛市</option>
+                                            <option value="3">潍坊市</option>
+                                            <option value="4">菏泽市</option>
+                                            <option value="5">烟台市</option>
+                                            <option value="6">泰安市</option>
+                                            <option value="7">淄博市</option>
+                                            <option value="8">德州市</option>
+                                            <option value="9">莱芜市</option>
+                                        </select>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="注册" data-role="none"/>
+                                </td>
+                                <td>
+                                    <input type="reset" value="重置" data-role="none"/>
+                                </td>
+                             </tr>
+                        </table>
+
+                        
+                    </form>
+                </div>
+            </div>
+            <!--登录注册页面   结束-->
+            <h3>主页</h3>
+        </div>
+        <div style="clear:both;"></div>
+        <div data-role="content">
+          
+            <div style="clear:both;"></div><!--清除浮动-->
+            <!--内容页面开始-->
+            <!--图库弹出层 开始-->
+            <div class="imgBg"></div>
+            <div class="imgBox">
+                <div class="img_html">
+                </div>
+                <img class="imgclose" src="image/mke_close.png" width="27" height="27" />
+
+            </div>
+            <!--图库弹出层 结束-->
+            <!--劳务市场开始-->
+            <div class="detail">
+                <div class="detailtop">
+                    <div class="top1">
+                        <p><a data-ajax="false" href="list/laowu.html">劳务市场</a></p>
+                    </div>
+                </div>
+
+                <div class="detailcenter">
+                    <div class="center1">                    
+                        <div class="left">
+                            <h4>劳务详情</h4>
+                            <p>姓名：张三  </p>
+                            <p>性别：男</p>
+                            <p>年龄：33岁</p>
+                            <p>工种：木工</p>
+                        </div>
+                        <div class="right" >
+
+                            <img class="img" src="image/01.jpg" alt="第一张图" />
+                            <span class="hidden">
+                                <img src="image/01.jpg" width="300" height="300" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--劳务市场  结束-->
+            <!--材料市场   开始-->
+                <div class="detail">
+                    <div class="detailtop">
+                        <div class="top1">
+                            <p><a data-ajax="false" href="list/cailiao.html">材料市场</a></p>
+                        </div>
+
+                    </div>
+                    <div class="detailcenter">
+
+                        <div class="center1">
+                            <div class="left">
+                                <h4>材料详情</h4>
+                                <p>类别：陶瓷 </p>
+                                <p>店铺名称：演示门市1</p>
+                                <p>联系人：张先生</p>
+                                <p>联系电话：13200567891</p>
+                            </div>
+                            <div class="right">
+
+                                <img class="img" src="image/11.jpg" alt="第一张图" />
+                                <span class="hidden">
+                                    <img src="image/11.jpg" width="300" height="300" />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--材料市场  结束-->
+      
+            <!--招标市场   开始-->
+            <div class="detail">
+                <div class="detailtop">
+                    <div class="top1">
+                        <p><a data-ajax="false" href="list/zhaobiao.html">招标市场</a></p>
+                    </div>
+                    
+                </div>
+                <div class="detailcenter">
+
+                    <div class="center1">
+                        <div class="left">
+                            <h4>材料详情</h4>
+                            <p>类别：陶瓷 </p>
+                            <p>店铺名称：演示门市1</p>
+                            <p>联系人：张先生</p>
+                            <p>联系电话：13200567891</p>
+                        </div>
+                        <div class="right">
+
+                            <img class="img" src="image/21.jpg" alt="第一张图" />
+                            <span class="hidden">
+                                <img src="image/21.jpg" width="300" height="300" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--招标市场   结束-->    
+            <!--车辆出租   开始-->
+            <div class="detail">
+                <div class="detailtop">
+                    <div class="top1">
+                        <p><a data-ajax="false" href="list/cheliangchuzu.html">车辆出租</a></p>
+                    </div>
+
+                </div>
+                <div class="detailcenter">
+
+                    <div class="center1">
+                        <div class="left">
+                            <h4>材料详情</h4>
+                            <p>类别：陶瓷 </p>
+                            <p>店铺名称：演示门市1</p>
+                            <p>联系人：张先生</p>
+                            <p>联系电话：13200567891</p>
+                        </div>
+                        <div class="right">
+
+                            <img class="img" src="image/31.jpg" alt="第一张图" />
+                            <span class="hidden">
+                                <img src="image/31.jpg" width="300" height="300" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--车辆出租   结束-->
+            <!--车辆求租   开始-->
+            <div class="detail">
+                <div class="detailtop">
+                    <div class="top1">
+                        <p><a data-ajax="false" href="list/cheliangqiuzu.html">车辆求租</a></p>
+                    </div>
+
+                </div>
+                <div class="detailcenter">
+
+                    <div class="center1">
+                        <div class="left">
+                            <h4>材料详情</h4>
+                            <p>类别：陶瓷 </p>
+                            <p>店铺名称：演示门市1</p>
+                            <p>联系人：张先生</p>
+                            <p>联系电话：13200567891</p>
+                        </div>
+                        <div class="right">
+
+                            <img class="img" src="image/01.jpg" alt="第一张图" />
+                            <span class="hidden">
+                                <img src="image/01.jpg" width="300" height="300" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--车辆求租   结束-->
+            <!--装修公司    开始-->
+            <div class="detail">
+                <div class="detailtop">
+                    <div class="top1">
+                        <p><a data-ajax="false" href="list/zhuangxiu.html">装修公司</a></p>
+                    </div>
+
+                </div>
+                <div class="detailcenter">
+
+                    <div class="center1">
+                        <div class="left">
+                            <h4>材料详情</h4>
+                            <p>类别：陶瓷 </p>
+                            <p>店铺名称：演示门市1</p>
+                            <p>联系人：张先生</p>
+                            <p>联系电话：13200567891</p>
+                        </div>
+                        <div class="right">
+
+                            <img class="img" src="image/11.jpg" alt="第一张图" />
+                            <span class="hidden">
+                                <img src="image/11.jpg" width="300" height="300" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--装修公司    结束-->
+            <!--空间设计   开始-->
+            <div class="detail">
+                <div class="detailtop">
+                    <div class="top1">
+                        <p><a data-ajax="false" href="list/kongjiansheji.html">空间设计</a></p>
+                    </div>
+
+                </div>
+                <div class="detailcenter">
+
+                    <div class="center1">
+                        <div class="left">
+                            <h4>材料详情</h4>
+                            <p>类别：陶瓷 </p>
+                            <p>店铺名称：演示门市1</p>
+                            <p>联系人：张先生</p>
+                            <p>联系电话：13200567891</p>
+                        </div>
+                        <div class="right">
+
+                            <img class="img" src="image/21.jpg" alt="第一张图" />
+                            <span class="hidden">
+                                <img src="image/21.jpg" width="300" height="300" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--空间设计   结束-->
+            <!--促销海报   开始-->
+            <div class="detail">
+                <div class="detailtop">
+                    <div class="top1">
+                        <p><a data-ajax="false" href="list/cuxiaohaibao.html">促销海报</a></p>
+                    </div>
+
+                </div>
+                <div class="detailcenter">
+
+                    <div class="center1">
+                        <div class="left">
+                            <h4>材料详情</h4>
+                            <p>类别：陶瓷 </p>
+                            <p>店铺名称：演示门市1</p>
+                            <p>联系人：张先生</p>
+                            <p>联系电话：13200567891</p>
+                        </div>
+                        <div class="right">
+
+                            <img class="img" src="image/31.jpg" alt="第一张图" />
+                            <span class="hidden">
+                                <img src="image/31.jpg" width="300" height="300" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--促销海报   结束-->
+            <!--导航菜单开始-->
+            <div id="menu">
+                <ol>
+                    <li class="menulist">
+                        <a data-ajax="false" href="个人中心.html">个人中心 </a>
+                    </li>
+                    <li class="menulist">
+                        <a data-ajax="false" href="#"> 发布指南</a>
+                    </li>
+
+                    <li class="menulist">
+                        <a data-ajax="false" href="#"> 服务手册</a>
+                    </li>
+                </ol>
+            </div>
+            <!--导航菜单结束-->
+            <!--内容页面结束-->
+            <!---->
+            </div>
+
+
+        <div data-role="footer" id="foot">
+
+           
+                <span>许可证编号：鲁ICP备16026958号</span>
+            <span>QQ交流群：221850104</span>
+           
+            <span> 版权所有：烟台云卓互联网信息科技有限公司</span>
+            
+
+            <p><a>鲁东大学本科生参与实战排行榜</a></p>
+        </div>
+    </div>
+
+
+</body>
+</html>

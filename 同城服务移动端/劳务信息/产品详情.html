@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+        <link rel="stylesheet" href="../css/detail.css">
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <title>产品详情</title>
+        <script type="text/javascript">
+            window.onload =function(){
+
+                var d1=document.getElementById("detail");
+                var d2=document.getElementById("information");
+                var c1=document.getElementById("left");
+                var c2=document.getElementById("right");
+                c1.onclick=function() {
+                    d1.style.display = "block";
+                    d2.style.display = "none";
+                    c1.style.textDecoration="underline";
+                    c2.style.textDecoration="none";
+                };
+                c2.onclick= function(){
+                    d1.style.display="none";
+                    d2.style.display="block";
+                    c1.style.textDecoration="none";
+                    c2.style.textDecoration="underline";
+                };
+                $(document).ready(function ($) {
+                    $('#detailup').height($(document).height());
+                    $('.more').click(function () {
+                        $('#detailup').show();
+                        $('#liuyan').slideDown(200);
+                    });
+                    $('.abtn').click(function () {
+                        $('#detailup').hide();
+                        $('#liuyan').slideUp(200);
+                    })
+
+                });
+        };
+        </script>
+    </head>
+    <body>
+    <div data-role="page">
+        <div id="head">
+            <div class="head1">
+                <a data-ajax="false" href="../list/laowu.html"><div class="return"></div></a>
+                <a data-ajax="false"id="show"><div class="more"></div></a>
+            </div>
+
+        </div>
+        <div id="center">
+            <div id="left">劳务详情</div>
+            <div id="right">联系我啊</div>
+        </div>
+        <div id="detail">
+            <hr>
+            <div class="name">
+                <span class="span1">姓名：</span>
+                <span class="span2">苏秦</span>
+            </div>
+            <hr>
+            <div class="sex">
+                <span class="span1">性别：</span>
+                <span class="span2">男</span>
+
+            </div>
+            <hr>
+            <div class="age">
+                <span class="span1">年龄：</span>
+                <span class="span2">33岁</span>
+            </div>
+            <hr>
+            <div class="kind">
+                <span class="span1">工种：</span>
+                <span class="span2">木工</span>
+            </div>
+            <hr>
+        </div>
+        <div id="information">
+            <hr>
+            <div class="tele">
+                <span class="span1">电话：</span>
+                <span class="span2">13145678901</span>
+            </div>
+            <hr>
+            <div class="qq">
+                <span class="span1">QQ:</span>
+                <span class="span2">12345578</span>
+
+            </div>
+            <hr>
+            <div class="addr">
+                <span class="span1">地址：</span>
+                <span class="span2">烟台市芝罘区红旗中路123号</span>
+            </div>
+            <hr>
+        </div>
+        <div data-role="footer" id="foot">
+
+
+            <span>许可证编号：鲁ICP备16026958号</span>
+            <span>QQ交流群：221850104</span>
+
+            <span> 版权所有：烟台云卓互联网信息科技有限公司</span>
+
+
+            <p><a>鲁东大学本科生参与实战排行榜</a></p>
+        </div>
+    </div>
+    <div id="detailup"></div>
+    <div id="liuyan">
+        <form>
+            <p>留言板</p>
+            <br>
+            <hr>
+            <img src="../image/liuyan.jpg">
+            <p class="p">发表留言</p>
+            <hr>
+            <span>姓名：</span><input class="input" type="text" placeholder="（必填）...">
+            <hr>
+            <span>电话：</span><input class="input" type="text" placeholder="11位数字哦">
+            <hr>
+            <span>留言：</span>
+            <textarea id="textarea" placeholder="留言...."></textarea>
+            <hr>
+            <br>
+            <input type="button" value="提交" style="width: 36px; height: 26px;font-size:14px">
+            <a data-role="button" class="abtn">返回</a>
+            <!--<input type="button" value="返回"style="margin: 3px; padding:3px;">-->
+        </form>
+    </div>
+    </body>
+</html>

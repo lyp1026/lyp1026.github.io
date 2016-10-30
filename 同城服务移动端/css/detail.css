@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#head{
+    width:auto;
+    height:300px;
+    background: url("../image/01.jpg") 0 0 no-repeat;
+    background-size:100% 100%;
+    position: relative;
+    z-index: 1;
+}
+#head .head1{
+    width: auto;
+    height: 36px;
+    background-color:rgba(255,255,255,0.6);
+}
+#head .return{
+    width: 40px;
+    height: 36px;
+    background: url("../image/return.jpg") 0 0 no-repeat;
+    opacity: 0.5;
+    float: left;
+    z-index: 2;
+}
+#head .more{
+    width: 40px;
+    height: 36px;
+    background: url("../image/more.jpg") 0 0 no-repeat;
+    opacity: 0.5;
+    float: right;
+    cursor: pointer;
+    z-index: 2;
+}
+#center{
+    width: auto;
+    height: 50px;
+    background-color: #e2fff8;
+    color: black;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+
+}
+#left{
+    width: 49.5%;
+    height: 100%;
+   float: left;
+    border-right: 1px solid #808080;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#right{
+    width: 49.5%;
+    height: 100%;
+    float: right;
+    cursor: pointer;
+}
+#detail{
+    width: auto;
+    height: 200px;
+    line-height: 48px;
+    font-family:"Microsoft Yahei";
+    text-align:center;
+    background-color: #87CEEB;
+}
+ .span1{
+    width: 30%;
+}
+ .span2{
+    width: 70%;
+    float: right;
+    text-align:left;
+}
+#information{
+    width: auto;
+    height: 200px;
+    line-height: 48px;
+    font-family:"Microsoft Yahei";
+    text-align:center;
+    background-color: #87CEEB;
+    display: none;
+}
+/*弹出部分   开始*/
+#detailup{
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    opacity: 0.7;
+    /*background-color: rgba(0,0,0,0.7);*/
+    display: none;
+
+
+}
+
+#liuyan{
+    display:none;
+    margin-top:-150px;
+    margin-left:-100px;
+    position:fixed;
+    left:27%;
+    top:30%;
+    z-index:20;
+    height: 70%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+#liuyan .p{
+    font-size: 25px;
+    color:#99D5FF;
+}
+#liuyan img{
+    padding-top: 5px;
+    width: 23px;
+    height: 23px;
+}
+#liuyan .input{
+    margin: 5px;
+    padding: 5px;
+    width: 70%;
+    text-align: center;
+    height: 25px;
+}
+#liuyan span{
+    float: left;
+}
+#liuyan #textarea{
+    width: 70%;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    height: 200px;
+}
+#liuyan .abtn{
+    font-size: 15px;
+    margin-left: 15px;
+    border: 1px solid grey;
+    background-color: #E2E2E2;
+    padding: 4px 2px;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*弹出部分   结束*/
+/*版权部分   开始*/
+
+#foot{
+    font-size:13px;
+    padding:5px;
+    text-align:center;
+
+}
+#foot span{
+    margin:13px;
+
+}
+#foot p{
+    margin:5px;
+
+}
+
+/*版权部分   结束*/
